@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/css/homestyle.css" />
+    <script src="https://kit.fontawesome.com/877a19a759.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <!-- <div class="header">
+        <a class="header-logo item" href="/">Arber Dev</a>
+        <a class="item">Blog</a>
+        <a class="item">Contact</a>
+        <a class="item">About</a>
+      </div> -->
+      <div class="form-container">
+        <form action="/edit/<%= club._id %>" method="post" class="form">
+            <div class="field-front">
+                <div class="field">
+                    <label for="club">Enter First Name</label>
+                    <input type="text" name="firstname" id="club" value="<%- club.firstname %>" />
+                  </div>
+                  <div class="field">
+                    <label for="players">Enter Last Name</label>
+                    <input type="text" name="lastnane" id="players" value="<%- club.lastname %>" />
+                  </div>
+                  <div class="field">
+                    <label for="coach">Enter Age</label>
+                    <input type="text" name="age" id="coach" value="<%- club.age %>" />
+                  </div>
+            </div>
+            <div class="fild-foot">
+                <div class="field-submit">
+                    <input type="submit" value="Save" class="submit-btn"/>
+                  </div>
+            </div>
+         
+      </div>
+    
+    </div>
+  </body>
+</html>

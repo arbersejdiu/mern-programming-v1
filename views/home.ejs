@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/css/homestyle.css" />
+    <script src="https://kit.fontawesome.com/877a19a759.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <!-- <div class="header">
+        <a class="header-logo item" href="/">Arber Dev</a>
+        <a class="item">Blog</a>
+        <a class="item">Contact</a>
+        <a class="item">About</a>
+      </div> -->
+      <div class="form-container">
+        <form action="/add" method="post" class="form">
+            <div class="field-front">
+                <div class="field">
+                    <label for="club">Enter First Name</label>
+                    <input type="text" name="firstname" id="club" />
+                  </div>
+                  <div class="field">
+                    <label for="players">Enter Last Name</label>
+                    <input type="text" name="lastname" id="players" />
+                  </div>
+                  <div class="field">
+                    <label for="coach">Enter Age</label>
+                    <input type="text" name="age" id="coach" />
+                  </div>
+            </div>
+            <div class="fild-foot">
+                <div class="field-submit">
+                    <input type="submit" value="Submit" class="submit-btn"/>
+                  </div>
+            </div>
+         
+      </div>
+      <div class="table-container">
+        <table class="table" border="1" >
+            <thead>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </thead>
+            <tbody>
+             
+              <% data.forEach(club => { %>
+              <tr>
+
+                <td><%= club.firstname %></td>
+                <td><%= club.lastname %></td>
+                <td><%= club.age %></td>
+                <td class="icon"><a href="/edit/<%- club._id %>"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                <td class="icon"><a href="/delete/<%- club._id %>"><i class="fa-solid fa-trash"></i></a></td>
+
+              </tr>
+              <% }) %>
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
